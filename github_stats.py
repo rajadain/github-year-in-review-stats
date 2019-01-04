@@ -1,7 +1,7 @@
 import sys
 
 from github import Github
-from datetime import datetime
+from datetime import datetime, timedelta
 
 token = ''
 
@@ -18,7 +18,15 @@ authenticated_user = g.get_user()
 # https://github.com/PyGithub/PyGithub/issues/330
 named_user = g.get_user(authenticated_user.login)
 
-since = datetime(2018, 1, 1)
+till = datetime.now()
+since = till - timedelta(days=365)
+
+print('')  # Blank line intentional
+print('Fetching data from {} to {}'.format(
+    since.strftime('%x'),
+    till.strftime('%x')
+))
+print('')
 
 # Initialize counters. Unfortunately, I could not find a way in the API to
 # fetch pull requests created by a user
