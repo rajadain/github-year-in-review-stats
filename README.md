@@ -1,6 +1,8 @@
 # GitHub Year in Review Stats Generator
 
-A script to generate statistics about your contributions on GitHub in the year 2018.
+A script to generate statistics about your contributions on GitHub in the last year.
+
+![carbon-demo](./carbon.png)
 
 ## Requirements
 
